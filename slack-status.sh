@@ -9,7 +9,7 @@ if pgrep -xq -- "Slack"; then if pgrep -xq -- "Music"; then
     if [ $songStatus = "playing" ] ; then
       artist=`osascript -e 'tell application "Music" to artist of current track as string'`
       track=`osascript -e 'tell application "Music" to name of current track as string'`;
-      slack status edit --text "$track by $artist" --emoji :musical_note: --expiration $(date -v "+5M" +"%s")
+      slack status edit --text "$track by $artist" --emoji :musical_note: --expiration $(date -v "+1M" +"%s")
     else
       slack status clear
     fi  

@@ -2,7 +2,7 @@
 
 Note: 
 
-`slack status get` and expiration parameter are added on my fork of slack-cli
+`slack status get` and expiration parameter are added on my [fork](https://github.com/skylerfenn/slack-cli) of slack-cli
 
 Also, you can call the script with a cron. 
 

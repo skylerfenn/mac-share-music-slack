@@ -1,15 +1,9 @@
 if pgrep -xq -- "Slack"; then
   if pgrep -xq -- "Spotify"; then
-    songStatus=`osascript -e "tell application \"Spotify\" to player state as string"`
-    if [[ $songStatus = "playing" ]]; then
-      player="Spotify"
-    fi
+    player="Spotify"
   fi
   if pgrep -xq -- "Music"; then
-    songStatus=`osascript -e "tell application \"Music\" to player state as string"`
-    if [[ $songStatus = "playing" ]]; then
-      player="Music"
-    fi
+    player="Music"
   fi
   if [[ $player ]]; then
     status=`slack status get`
